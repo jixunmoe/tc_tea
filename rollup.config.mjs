@@ -9,7 +9,7 @@ export default defineConfig([
       file: 'dist/tc_tea.cjs',
       format: 'cjs',
     },
-    plugins: [typescript()],
+    plugins: [typescript({ compilerOptions: { module: 'ESNext' } })],
   },
   {
     input: 'src/index.ts',
@@ -17,7 +17,7 @@ export default defineConfig([
       file: 'dist/tc_tea.mjs',
       format: 'es',
     },
-    plugins: [typescript()],
+    plugins: [typescript({ compilerOptions: { module: 'ESNext' } })],
   },
   {
     input: 'src/index.ts',
