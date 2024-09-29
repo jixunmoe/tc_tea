@@ -5,6 +5,10 @@
   "main": "./dist/tc_tea.cjs",
   "module": "./dist/tc_tea.mjs",
   "types": "./dist/tc_tea.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
   "exports": {
     ".": {
       "require": "./dist/tc_tea.cjs",
