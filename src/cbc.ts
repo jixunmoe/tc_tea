@@ -69,7 +69,7 @@ export class CBC {
       throw new TcTeaSizeError();
     }
 
-    const result = buf.slice();
+    const result = new Uint8Array(buf);
 
     const iv1 = new Uint8Array(8);
     const iv2 = new Uint8Array(8);
