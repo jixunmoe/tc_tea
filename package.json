@@ -1,0 +1,46 @@
+{
+  "name": "tc_tea",
+  "version": "1.0.0-rc1",
+  "description": "Tencent modified TEA, ported to Node",
+  "main": "./dist/tc_tea.cjs",
+  "module": "./dist/tc_tea.mjs",
+  "types": "./dist/tc_tea.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/tc_tea.cjs",
+      "import": "./dist/tc_tea.mjs",
+      "types": "./dist/tc_tea.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "test": "node -r ts-node/register --test src/**/*_test.ts"
+  },
+  "keywords": [
+    "tc_tea",
+    "tea"
+  ],
+  "author": "Jixun Wu",
+  "license": "MIT",
+  "repository": "github:jixunmoe/tc_tea",
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "@rollup/plugin-typescript": "^12.1.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^22.7.4",
+    "eslint": "^9.11.1",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "3.3.3",
+    "rollup": "^4.22.5",
+    "rollup-plugin-dts": "^6.1.1",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.7.0",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.7.0"
+  },
+  "prettier": {
+    "endOfLine": "lf",
+    "printWidth": 120,
+    "singleQuote": true
+  }
+}
