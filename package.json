@@ -42,5 +42,6 @@
     "endOfLine": "lf",
     "printWidth": 120,
     "singleQuote": true
-  }
+  },
+  "packageManager": "pnpm@9.10.0"
 }
