@@ -1,6 +1,6 @@
 {
   "name": "tc_tea",
-  "version": "1.0.1-rc2",
+  "version": "1.0.1-rc3",
   "description": "Tencent modified TEA, ported to Node",
   "main": "./dist/tc_tea.cjs",
   "module": "./dist/tc_tea.mjs",
