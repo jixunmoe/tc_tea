@@ -26,7 +26,7 @@ export class ECB {
       key = Uint8Array.from(Array.from(key, (x) => x.charCodeAt(0)));
     }
 
-    const view = new DataView(key.buffer);
+    const view = new DataView(key.buffer, key.byteOffset, key.byteLength);
     this.keys = Int32Array.from([0, 0, 0, 0].map((_, idx) => view.getUint32(idx * 4, false)));
   }
 

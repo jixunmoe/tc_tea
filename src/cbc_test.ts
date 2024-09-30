@@ -21,3 +21,16 @@ test('cbc:encrypt', () => {
   const decrypted = tea.decrypt(encrypted);
   assert.deepEqual(decrypted, expected);
 });
+
+test('cbc:encrypt:key from buffer concat', () => {
+  const keyPool = Buffer.from('12345678?????????????????ABCDEFGH');
+  const data = Buffer.from('hello world', 'utf-8');
+  const expected = Buffer.from(data);
+
+  const tea = CBC.fromKey(Buffer.concat([keyPool.subarray(0, 8), keyPool.subarray(-8)]));
+  const encrypted = tea.encrypt(data);
+
+  const decipher = CBC.fromKey('12345678ABCDEFGH');
+  const decrypted = decipher.decrypt(encrypted);
+  assert.deepEqual(decrypted, expected);
+});
